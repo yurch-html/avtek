@@ -1,0 +1,387 @@
+.section-item {
+  padding-top: 5.5em;
+}
+
+.section-item__title {
+  margin-bottom: 5em;
+}
+
+.serv-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.serv-list__item {
+  width: calc(33.33% + 1px);
+  margin-right: -1px;
+  margin-top: -1px;
+
+  @media screen and (max-width: $screen-tablet) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+}
+
+.serv-item__text-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $anim;
+}
+
+.serv-item {
+  position: relative;
+  display: block;
+  border: 1px solid;
+  padding-bottom: 74%;
+  text-align: center;
+  transition: color $anim, background-color $anim;
+
+  @media screen and (min-width: $screen-tablet) {
+    &:hover {
+      border-color: $brand-color;
+      background-color: $brand-color;
+      color: $white;
+
+      .serv-item__text-wrap {
+        max-height: 200px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-tablet) {
+    border-color: currentColor;
+    background-color: $brand-color;
+    color: $white;
+
+    .serv-item__text-wrap {
+      max-height: 200px;
+    }
+  }
+}
+
+.serv-item__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+.serv-item__ico {
+  width: 5em;
+  height: 2.5em;
+  margin-bottom: 2em;
+}
+
+.min-title {
+  font-size: 1.16em;
+  text-transform: uppercase;
+}
+
+.text {
+  position: relative;
+  width: 100%;
+  padding-top: 1em;
+  margin-top: 1em;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: normal;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 3em;
+    margin: auto;
+    background-color: currentColor;
+  }
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.7em;
+  margin-left: -.7em;
+}
+
+.advantages-list__item {
+  width: 25%;
+  padding: 0 1.4em;
+  margin-bottom: 4em;
+
+  @media screen and (max-width: $screen-tablet) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+}
+
+.advantages-item {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.advantages-item__ico {
+  display: block;
+  width: 8.9em;
+  height: 8.9em;
+  padding: 1.2em;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  border-radius: 50%;
+  border: .5em solid;
+  background-color: $brand-color;
+  box-shadow: 0 0 0 1px $brand-color;
+  color: $white;
+}
+
+.sect-info {
+  background-image: url('../img/bg/bg_pic.jpg');
+  background-size: cover;
+  background-position: center;
+  font-size: 1rem;
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-sm-max) {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    padding: 1em 0;
+  }
+}
+
+.sect-info__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 29em;
+  padding: 2em;
+  margin-right: -1em;
+  background-color: rgba($black, .8);
+  color: $white;
+
+  @media screen and (max-width: $screen-sm-max) {
+    max-width: 100%;
+  }
+}
+
+.sect-info__pic {
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.sect-info__text {
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 1.6;
+  white-space: normal;
+}
+
+.sect-info__list {
+  align-self: center;
+  width: 100%;
+  max-width: 29em;
+  padding: 2em;
+  padding-left: 5em;
+  margin: 4em 0;
+  background-color: rgba($white, .8);
+  background-image: url('../img/bg/bg_spare_part.svg');
+  background-size: 50%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: $black;
+  font-size: 1.2em;
+  text-decoration: underline;
+  line-height: 1.6;
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1em;
+  }
+  
+  a {
+    &:visited {
+      color: darkblue;
+    }
+
+    &:active {
+      color: red;
+    }
+  }
+
+  @media screen and (max-width: $screen-tablet) {
+    width: 40%;
+    padding: 2em;
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    margin-top: 1em;
+  }
+}
+
+.sect-wrap {
+  padding-top: 5.5em;
+  background-color: $light;
+}
+
+.application {
+  background-color: $white;
+
+  & > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-sm-max) {
+      flex-direction: column;
+
+      & > *:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    padding: 2em 0;
+  }
+}
+
+.application__img {
+  position: relative;
+  width: 10em;
+  margin-right: 1em;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-bottom: 50%;
+  }
+}
+
+.application__text {
+  text-align: center;
+  font-size: 2em;
+
+  & > * {
+    display: block;
+  }
+}
+
+.application__bold {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.application__car {
+  width: 20em;
+  background-image: url('../img/bg/car.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-bottom: 50%;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    display: none;
+  }
+
+}
+
+.application__btn {
+  flex-shrink: 0;
+}
+
+.news-prev-wrap {
+  padding-top: 5.5em;
+  padding-bottom: 2em;
+
+  & > .container {
+    padding: 0;
+  }
+}
+
+.news-prev {
+  margin-bottom: 2em;
+}
+
+.news-prev,
+.text-sect {
+  padding-top: 3em;
+  background-color: $white;
+}
+
+.text-sect {
+  padding-bottom: 1em;
+}
+
+.news-prev__title {
+  margin-bottom: 1.2em;
+}
+
+.text-sect__title {
+  margin-bottom: 2em;
+}
+
+.news-prev__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-prev__item {
+  width: 33.33%;
+
+  @media screen and (max-width: $screen-tablet) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+}
+
+.text-sect__desc {
+  padding: 0 7em;
+  text-align: justify;
+  letter-spacing: .03em;
+  line-height: 1.4;
+
+  p {
+    margin-bottom: 2em;
+  }
+
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  @media screen and (max-width: $screen-tablet) {
+    padding: 0 2em;
+  }
+}

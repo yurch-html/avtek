@@ -1,0 +1,52 @@
+html {
+  display: flex;
+  font-size: 16px;
+
+  @media screen and (max-width: $screen-lg-max){
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: $screen-tablet){
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: $screen-sm-max){
+    font-size: 13px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: $verdana;
+  font-weight: 400;
+  color: $black;
+
+  &.fixed {
+    position: fixed;
+    overflow: hidden;
+
+    @media screen and (min-width: $screen-tablet) {
+      padding-right: 15px;
+    }
+  }
+
+  @media screen and (max-width: $screen-lg-max){
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: $screen-tablet){
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: $screen-sm-max){
+    font-size: 10px;
+  }
+}
+
+.container {
+  max-width: 1173px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
